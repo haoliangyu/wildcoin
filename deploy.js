@@ -10,7 +10,7 @@ const params = {
   language: "Solidity",
   sources: {
     contract: {
-      content: readFileSync("./contracts/example.sol", "utf-8")
+      content: readFileSync("./contracts/WildCoin.sol", "utf-8")
     }
   },
   settings: {
