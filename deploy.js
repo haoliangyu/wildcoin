@@ -25,7 +25,7 @@ const params = {
 const compiled = JSON.parse(
   solc.compileStandardWrapper(JSON.stringify(params))
 );
-const compiledContract = compiled.contracts["contract"];
-const contract = new web3.eth.Contract(compiledContract.Calculator.abi);
+const compiledContract = compiled.contracts.contract["WildCoin"];
+const contract = new web3.eth.Contract(compiledContract.abi);
 
-contract.deploy(compiledContract.Calculator.evm.bytecode);
+contract.deploy(compiledContract.evm.bytecode);
