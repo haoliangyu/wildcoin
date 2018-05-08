@@ -2,10 +2,10 @@
   "name": "wildcoin",
   "version": "1.0.0",
   "description": "a wild coin appears!",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "node deploy.js",
+    "test": "truffle test",
+    "migrate": "truffle migrate",
+    "compile": "truffle compile",
     "precommit": "lint-staged"
   },
   "repository": {
@@ -22,11 +22,13 @@
     "husky": "^0.14.3",
     "lint-staged": "^7.0.4",
     "prettier": "^1.11.1",
-    "solc": "^0.4.21",
-    "web3": "^1.0.0-beta.33"
+    "truffle": "^4.1.8"
   },
   "dependencies": {},
   "lint-staged": {
-    "*.{js,md}": ["prettier --write", "git add"]
+    "*.{js,md}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }
